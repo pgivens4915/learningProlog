@@ -1,5 +1,6 @@
-woman(mia).
-woman(jody).
-woman(yolanda).
-playsAirGuitar(jody).
-party.
+% Prolog
+happy(yolanda).
+listens2Music(mia).
+listens2Music(yolanda):- happy(yolanda).
+playsAirGuitar(mia):- listens2Music(mia).
+playsAirGuitar(yolanda):- listens2Music(yolanda).
