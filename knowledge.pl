@@ -1,9 +1,9 @@
 % Prolog
-happy(vincent).
-listens2Music(butch).
-playsAirGuitar(vincent):-
-  listens2Music(vincent),
-  happy(vincent).
-playsAirGuitar(butch):-
-  happy(butch);
-  listens2Music(butch).
+woman(mia).
+woman(jody).
+woman(yolanda).
+
+loves(vincent, mia).
+loves(marsellus, mia).
+loves(pumpkin, honey_bunny).
+loves(honey_bunny, pumpkin).
