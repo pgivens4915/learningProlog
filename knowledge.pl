@@ -1,7 +1,3 @@
 % Prolog
-loves(vincent, mia).
-loves(marsellus, mia).
-loves(pumpkin, honey_bunny).
-loves(honey_bunny, pumpkin).
-
-jealous(X,Y):- loves(X,Z), loves(Y,Z).
+vertical(line(point(X,Y),point(X,Z))).
+horizontal(line(point(X,Y),point(Z,Y))).
