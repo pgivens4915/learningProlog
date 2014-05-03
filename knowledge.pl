@@ -1,3 +1,8 @@
 % Prolog
-vertical(line(point(X,Y),point(X,Z))).
-horizontal(line(point(X,Y),point(Z,Y))).
+houseElf(dobby).
+witch(hermoione).
+witch('McGonagall').
+witch(ritaSkeeter).
+magic(X) :- houseElf(X).
+magic(X) :- wizard(X).
+magic(X) :- witch(X).
