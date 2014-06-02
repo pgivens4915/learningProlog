@@ -21,3 +21,27 @@ connected(16,19).
 path(A,B) :- connected(A,B).
 
 path(A,B) :- path(A,X), connected(X,B).
+
+
+byCar(auckland,hamilton). 
+byCar(hamilton,raglan). 
+byCar(valmont,saarbruecken). 
+byCar(valmont,metz). 
+
+byTrain(metz,frankfurt). 
+byTrain(saarbruecken,frankfurt). 
+byTrain(metz,paris). 
+byTrain(saarbruecken,paris). 
+
+byPlane(frankfurt,bangkok). 
+byPlane(frankfurt,singapore). 
+byPlane(paris,losAngeles). 
+byPlane(bangkok,auckland). 
+byPlane(singapore,auckland). 
+byPlane(losAngeles,auckland).
+
+travel(A,B) :- byCar(A,B); byTrain(A,B); byPlane(A,B).
+
+trip(A,B) :- travel(A,B).
+trip(A,B) :- trip(A,X), travel(X,B).
+
