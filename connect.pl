@@ -45,3 +45,8 @@ travel(A,B) :- byCar(A,B); byTrain(A,B); byPlane(A,B).
 trip(A,B) :- travel(A,B).
 trip(A,B) :- trip(A,X), travel(X,B).
 
+
+go(LocationA, LocationB, go(LocationA, LocationB)) :-
+    travel(LocationA, LocationB).
+
+go(A,B,go(A,P)) :- go(A,X,P), travel(X,B).
