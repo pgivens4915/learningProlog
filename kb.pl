@@ -13,3 +13,11 @@ sentence(W1, W2, W3, W4, W5):-
   word(determiner, W4),
   word(noun, W5),
   nl.
+
+numeral(0).
+numeral(succ(X)) :- numeral(X).
+
+greater_than(succ(X), 0) :- numeral(X).
+greater_than(succ(X),succ(Y)) :- greater_than(X, Y).
+
+% 
