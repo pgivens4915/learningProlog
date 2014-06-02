@@ -1,23 +1,23 @@
 % Prolog
-word(determiner, a).
-word(determiner, every).
-word(noun, 'big kahuna burger').
-word(noun, criminal).
-word(verb, eats).
-word(verb, likes).
 
-sentence(W1, W2, W3, W4, W5):-
-  word(determiner, W1),
-  word(noun, W2),
-  word(verb, W3),
-  word(determiner, W4),
-  word(noun, W5),
-  nl.
+member(X,[X|_]).
+member(X,[_|T]) :- member(X,T).
 
-numeral(0).
-numeral(succ(X)) :- numeral(X).
+a2b([],[]).
+a2b([a|T1],[b|T2]) :- a2b(T1,T2).
 
-greater_than(succ(X), 0) :- numeral(X).
-greater_than(succ(X),succ(Y)) :- greater_than(X, Y).
+tran(eins,one). 
+tran(zwei,two). 
+tran(drei,three). 
+tran(vier,four). 
+tran(fuenf,five). 
+tran(sechs,six). 
+tran(sieben,seven). 
+tran(acht,eight). 
+tran(neun,nine).
 
-% 
+trans([],[]).
+trans([X | T],[Y | NT]) :- tran(X,Y), trans(T,NT).
+
+twice([],[]).
+twice([H | T], [H, H | NT]) :- twice(T,NT).
